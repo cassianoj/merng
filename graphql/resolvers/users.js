@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
-const {SECRET_KEY} = require('../../config');
+const { SECRET_KEY } = require('../../config');
 const User = ('../../models/User');
 
 module.exports = {
@@ -14,7 +14,7 @@ module.exports = {
             context, 
             info
         ) {
-            //TODO: validade user date
+            //TODO: validade user data
             //TODO: Make sure user doesnt already exist
             //TODO: hash password and create an auth token
 
