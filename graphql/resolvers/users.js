@@ -2,18 +2,12 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 const { SECRET_KEY } = require('../../config');
-const User = ('../../models/User');
+const User = require('../../models/User');
 
 module.exports = {
     Mutation: {
-        async register(
-            _, 
-            {
-                registerIput : { username, email, password, confirmPassword }
-            }, 
-            context, 
-            info
-        ) {
+        async register(_, {registerIput : { username, email, password, confirmPassword }}, context, info) 
+        {
             //TODO: validade user data
             //TODO: Make sure user doesnt already exist
             //TODO: hash password and create an auth token
