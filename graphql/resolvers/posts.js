@@ -1,6 +1,5 @@
 const { AuthenticationError } = require('apollo-server');
 
-// const { Mutation, Query} = require('../typeDefs');
 const Post = require('../../models/Post');
 const checkAuth = require('../../util/check-auth');
 

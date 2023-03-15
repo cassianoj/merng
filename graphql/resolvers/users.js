@@ -52,12 +52,12 @@ module.exports = {
 
         ,async register(_, { registerInput: { username, email,  password, confirmPassword } }) 
         {
-            //TODO: validade user data
+            //Validade user data
             const { valid, errors} = validateRegisterInput(username, email,  password, confirmPassword)
             if(!valid){
                 throw new UserInputError('Errors', {errors});
             }
-            //TODO: Make sure user doesnt already exist
+            //Make sure user doesnt already exist
             const user = await User.findOne({username});
 
             if (user) {
