@@ -4,6 +4,7 @@
   "description": "Criação de uma rede social com utilização de GraphQL",
   "main": "index.js",
   "scripts": {
+    "server": "node index",
     "start": "nodemon index"
   },
   "keywords": [],
