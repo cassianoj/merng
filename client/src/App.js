@@ -1,16 +1,22 @@
-import React from 'react'
+import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import 'semantic-ui-css/semantic.min.css'
+import 'semantic-ui-css/semantic.min.css';
 import './App.css';
+
+import MenuBar from './components/MenuBar';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 
 function App() {
   return (
     <Router>
-      <Route exact path='/' component ={Home}q></Route>
-      <Route exact path='/login' component ={Login}q></Route>
-      <Route exact path='/register' component ={Register}q></Route>
+      <MenuBar/>
+      <Route exact path='/' element={Home} />
+      <Route exact path='/login' element={Login} />
+      <Route exact path='/register' element={Register} />
     </Router>
   );
 }
